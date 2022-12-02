@@ -37,12 +37,12 @@ class Report
   # subclasses.
   #
   # We throw exceptions for “abstract” methods so subclasses are
-  # forced to implement then. However, we DO NOT throw for methods
+  # forced to implement them. However, we DO NOT throw for methods
   # that do not always need to be overridden, because a few would
   # be implemented as empty/do nothing in the concrete classes.
   #
   # For example, `output_body_end` (and a few others) need to do nothing
-  # for Plain Text, so, why force `PlainTextReport` to implement then?
+  # for Plain Text, so, why force `PlainTextReport` to implement them?
   #
   def output_report
     output_start
@@ -62,6 +62,7 @@ class Report
   ##
   # A hook method. Does nothing by default. `HTMLReport` would override
   # it, but perhaps `PlainTextReport` would not.
+  #
   def output_start; end
 
   ##
